@@ -23,8 +23,10 @@ public class mockRoleTest {
 		mockRoles roles = new mockRoles(permiso);
 
 		String espected = "PERMISSION ROLE : R -  DD MM YYYY hh mm ss";
-		String obtained = roles.getUser(true, "R");
+		String obtained = roles.getUser(false, "R");
+		String obtained2 = roles.getUser(true, "R");
 		Assertions.assertEquals(espected, obtained, "Incorrect USER and PWD");
+		Assertions.assertEquals(espected, obtained2, "Incorrect USER and PWD");
 
 		Mockito.verify(permiso).permisoYTiempo("CRUD");
 		Mockito.verify(permiso).permisoYTiempo("CD");

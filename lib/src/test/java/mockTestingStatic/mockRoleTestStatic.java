@@ -23,6 +23,7 @@ public class mockRoleTestStatic {
 		mockRolesStatic mockRole = new mockRolesStatic();
 		String expected = "PERMISSION ROLE : R -  DD MM YYYY hh mm ss";
 		String obtained = mockRole.getUser(true, "R");
+		String obtained2 = mockRole.getUser(false, "R"); //<- error
 
 		Assertions.assertEquals(expected, obtained, "Incorrect USER and PWD");
 	}
