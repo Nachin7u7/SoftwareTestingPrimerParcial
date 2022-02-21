@@ -12,13 +12,12 @@ public class mockRoles {
 		this.permiso = permiso;
 	}
 
-	public String getUser(boolean user) {
+	public String getUser(boolean user, String role) {
 		if (!user) {
 			return "Incorrect USER and PWD";
 		} else {
-			return permiso.permisoYTiempo();
+			return permiso.permisoYTiempo(role);
 		}
-		return null;
 	}
 
 }
